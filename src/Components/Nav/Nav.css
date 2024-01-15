@@ -1,0 +1,22 @@
+.nav{
+    display: flex;
+
+}
+
+.nav li{
+    list-style: none;
+}
+
+a.navItem {
+    color: white;
+    font-weight: bold;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+a.active{
+    color: bisque;
+    text-decoration: underline;
+}
+

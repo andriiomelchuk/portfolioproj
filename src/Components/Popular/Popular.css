@@ -1,0 +1,17 @@
+.languages{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.languages li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}

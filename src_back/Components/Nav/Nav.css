@@ -1,0 +1,10 @@
+
+a.navItem {
+    color: darkblue;
+    font-weight: bold;
+}
+
+a.active{
+    color: red;
+}
+
