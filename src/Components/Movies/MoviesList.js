@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {fetchMovieList} from "../../api/movies";
+import {fetchMovieList, fetchMoviesType} from "../../api/api.movies";
 import Search from "./Search";
 import * as PropTypes from "prop-types";
 import './movies.css'
@@ -19,10 +19,16 @@ const MoviesList = () => {
     const [movies, setMovies] = useState({});
 
 
-        const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         fetchMovieList(moviesName).then(moviesData => setMovies(moviesData));
     }
+
+   /* const handleFilter = (movieType, moviesName) => {
+        setSearchType(movieType);
+        console.log(searchType)
+        fetchMoviesType(searchType, moviesName).then(moviesData => setMovies(moviesData))
+    }*/
 
     const handleFilter = (movieType) => {
         setSearchType(movieType);
@@ -32,7 +38,6 @@ const MoviesList = () => {
                 return setMovies(response.data.Search);
             })
     }
-
 
 
     return (

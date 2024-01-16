@@ -4,6 +4,7 @@
     justify-content: center;
 }
 
+
 .languages li {
     display: flex;
     align-items: center;
@@ -14,4 +15,19 @@
     background: black;
     color: white;
     border-radius: 5px;
+}
+
+.popularList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.popularList li {
+    list-style: none;
+    flex: 0 1 20%;
+}
+
+.popularItem{
+    padding: 15px 0;
 }

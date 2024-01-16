@@ -32,3 +32,4 @@ const Search = ({handleSubmit, handleFilter, setMoviesName, moviesName, leng}) =
 }
 
 export default Search;
+

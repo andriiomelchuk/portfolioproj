@@ -1,18 +1,17 @@
-const PopularItem = () => {
+const PopularItem = ({name, avatar, language, login, url, star, index}) => {
     return (
-        <li>
-            <div>rank</div>
-            <ul>
-                <li>
-                    <img src="#" alt="Avatar"/>
-                </li>
-                <li>
-                    <a href="#">repo name</a>
-                </li>
-                <li>login</li>
-                <li>stars</li>
-            </ul>
-        </li>
+        <ul>
+            <div className='popularRank'>#{index + 1}</div>
+            <li>
+                <img src={avatar} alt="Avatar"/>
+            </li>
+            <li>{login}</li>
+            <li>{star}</li>
+            <li>{language}</li>
+            <li>
+                <a href={url}>{name}</a>
+            </li>
+        </ul>
     )
 }
 
