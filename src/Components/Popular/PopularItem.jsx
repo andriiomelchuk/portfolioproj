@@ -9,7 +9,7 @@ const PopularItem = ({name, avatar, language, login, url, star, index}) => {
             <li>{star}</li>
             <li>{language}</li>
             <li>
-                <a href={url}>{name}</a>
+                <a href={url} target='_blank'>{name}</a>
             </li>
         </ul>
     )

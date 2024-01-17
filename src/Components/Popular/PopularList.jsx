@@ -2,7 +2,6 @@ import PopularItem from "./PopularItem";
 
 
 const PopularList = (repos) => {
-    console.log(repos.repos, 'repos')
     return (
         <>
             {repos.repos.map((repo, index) => (
