@@ -31,3 +31,7 @@
 .popularItem{
     padding: 15px 0;
 }
+
+li.addLangField{
+    background: none;
+}
