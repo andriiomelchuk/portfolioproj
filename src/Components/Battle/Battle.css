@@ -1,0 +1,36 @@
+
+.battleBody.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.battleBody form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.battleBody label{
+    padding: 10px 0;
+}
+
+.battleBody button.button{
+    margin-top: 15px;
+}
+
+.reset{
+
+}
+
+.battleLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 100px;
+}
