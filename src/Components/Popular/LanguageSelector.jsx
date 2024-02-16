@@ -1,6 +1,6 @@
 import PopularList from "./PopularList";
 import {useEffect, useState} from "react";
-import './Popular.css'
+import './Popular.less'
 import {fetchPopularRepos} from "../../api/api.github";
 import CircularIndeterminate from "../Loader/Loader";
 import {languagesArr} from "../../api/constants";

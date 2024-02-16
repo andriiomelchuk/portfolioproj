@@ -1,5 +1,5 @@
 import LanguageSelector from "../../Components/Popular/LanguageSelector";
-import '../../Components/Popular/Popular.css'
+import '../../Components/Popular/Popular.less'
 
 const Popular = () => {
     return (
