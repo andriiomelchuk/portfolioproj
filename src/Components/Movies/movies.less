@@ -1,0 +1,76 @@
+.moviePage{
+
+    .searchForm{
+        display: flex;
+
+        p {
+            margin:0px 0px 0px 15px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid grey;
+        }
+
+        button{
+            padding: 7px 10px;
+            background: green;
+            color: white;
+            font-weight: bold;
+            border-radius: 7px;
+            border: navajowhite;
+            margin-left: 15px;
+        }
+    }
+
+    .filterBlock{
+        display: flex;
+        margin: 15px 0;
+        p{
+            margin: 0;
+        }
+        ul{
+            &.typeBlock{
+                display: flex;
+                list-style: none;
+                margin: 0px;
+                .itemBlock{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0px 15px;
+                    border: 1px solid red;
+                    margin: 0 5px;
+                    cursor: pointer;
+                    border-radius: 7px;
+                }
+            }
+        }
+    }
+
+    .moviesList{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .item{
+        flex: 0 1 25%;
+        padding: 0 15px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .searchForm{
+        align-items: center;
+        justify-content: center;
+    }
+    .moviesList{
+        align-items: center;
+        justify-content: center;
+        .item{
+            flex: 0 1 auto;
+        }
+    }
+}

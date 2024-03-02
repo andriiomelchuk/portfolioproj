@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import  '../Nav/Nav.css'
+import './Nav.less'
 
 
 // Easy nav
@@ -13,22 +13,32 @@ const navLinks = [
 
 const Nav = () => {
     return (
-        <nav>
-            <ul className='nav'>
-                {navLinks.map(navLink => (
-                    <li key={navLink.id}>
-                        <NavLink className='navItem' to={navLink.title === 'Home' ?'/' : navLink.link.toLowerCase()}>
-                            {navLink.title}
-                        </NavLink>
-                    </li>
-                ))}
+        <nav className='navbar'>
+            <div className="navbar-container container">
+                <input type="checkbox" name="" id=""/>
+                <div className="hamburger-lines">
+                    <span className="line line1"></span>
+                    <span className="line line2"></span>
+                    <span className="line line3"></span>
+                </div>
+                <ul className='menu-items'>
+                    {navLinks.map(navLink => (
+                        <li key={navLink.id}>
+                            <NavLink className='navItem'
+                                     to={navLink.title === 'Home' ? '/' : navLink.link.toLowerCase()}>
+                                {navLink.title}
+                            </NavLink>
+                        </li>
+                    ))}
 
-            </ul>
+                </ul>
+            </div>
         </nav>
     )
 }
 
-export default Nav
+export default Nav;
+
 
 /*
 

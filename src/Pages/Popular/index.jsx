@@ -3,7 +3,9 @@ import '../../Components/Popular/Popular.less'
 
 const Popular = () => {
     return (
-        <LanguageSelector />
+        <div className="popularPage">
+            <LanguageSelector/>
+        </div>
     )
 }
 

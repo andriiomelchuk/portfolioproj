@@ -36,10 +36,10 @@ const Results = () => {
         return <p>Error</p>
     }
     return (
-        <>
-            <Player label='Winner' profile={winner.profile} score={winner.score} />
-            <Player label='Loser'  profile={loser.profile} score={loser.score}/>
-        </>
+        <div className="result">
+            <div className="resultCard winner two-block"><Player label='Winner' profile={winner.profile} score={winner.score} /></div>
+            <div className="resultCard loser two-block"><Player label='Loser'  profile={loser.profile} score={loser.score}/></div>
+        </div>
     )
 }
 

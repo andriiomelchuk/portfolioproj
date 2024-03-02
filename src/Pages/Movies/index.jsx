@@ -5,11 +5,11 @@ const Movies = () => {
 
     return(
 
-        <main>
+        <div className='moviePage'>
             Enter movies name
             <br/>
             <MoviesList />
-        </main>
+        </div>
     )
 }
 

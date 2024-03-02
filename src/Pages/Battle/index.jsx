@@ -1,4 +1,4 @@
-import "../../Components/Battle/Battle.css"
+import "../../Components/Battle/Battle.less"
 import Players from "../../Components/Battle/Players";
 
 const Battle = () => {

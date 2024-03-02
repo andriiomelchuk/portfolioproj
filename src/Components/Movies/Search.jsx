@@ -1,4 +1,4 @@
-import './movies.css'
+import './movies.less'
 
 const Search = ({handleSubmit, handleFilter, setMoviesName, moviesName, leng}) => {
 

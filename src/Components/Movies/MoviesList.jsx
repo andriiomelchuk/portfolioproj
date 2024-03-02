@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {fetchMovieList, fetchMoviesType} from "../../api/api.movies";
 import Search from "./Search";
 import * as PropTypes from "prop-types";
-import './movies.css'
+import './movies.less'
 import axios from "axios";
 import {API_KEY} from "../../api/constants";
 
@@ -52,7 +52,7 @@ const MoviesList = () => {
             />
 
             {movies.length ?
-                <div className='movieslList'>
+                <div className='moviesList'>
                     {movies.map((mov) => {
                         return <div className='item four-block' key={mov.imdbID}>
                             <div>{mov.Title}</div>
