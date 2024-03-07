@@ -1,0 +1,23 @@
+@import "src/less/variables";
+
+.todosPage{
+  li{
+    &.todoItem{
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      .delete{
+        color: @red-color;
+        cursor: pointer;
+      }
+      input[type='checkbox']{
+        &:checked {
+          &~ span {
+            color: red;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}

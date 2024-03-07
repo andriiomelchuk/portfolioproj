@@ -9,6 +9,7 @@ const navLinks = [
     {id: 1, title: 'Search movies', link: 'Movies'},
     {id: 2, title: 'Popular languages', link: 'Popular'},
     {id: 3, title: 'Github Battle', link: 'battle'},
+    {id: 4, title: 'Todo list', link: 'todo'},
 ];
 
 const Nav = () => {

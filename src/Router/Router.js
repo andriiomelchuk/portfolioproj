@@ -6,6 +6,7 @@ import Movies from "../Pages/Movies";
 import Popular from '../Pages/Popular'
 import Battle from "../Pages/Battle";
 import Results from "../Components/Battle/Results";
+import Todo from "../Pages/Todo";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: "battle/results",
                 element: <Results />,
+            },
+            {
+                path: "/todo",
+                element: <Todo />,
             },
             {
                 path: "*",
