@@ -7,7 +7,8 @@ const TodoList = () => {
     const [text, setText] = useState('');
     const [todos, setTodos] = useState([]);
 
-    const addListItem = () => {
+
+    const addItem = () => {
         setTodos([
             ...todos,
             {
@@ -15,31 +16,34 @@ const TodoList = () => {
                 text,
                 completed: false
             }
-        ]);
-        setText('');
+        ])
     }
 
-    const removeTodoItem = (id) => {
+    const removeItem = (id) => {
         setTodos(todos.filter(todo => todo.id !== id));
     }
 
-    const toggleTodoComplete = (id) => {
+    const toggleCompleted = (id) => {
         setTodos(todos.map(todo => {
             if (todo.id !== id) return todo;
 
             return {
                 ...todo,
                 completed: !todo.completed
-            }
+        }
+
+
         }))
     }
 
+
     return (
         <>
-            <AddTodos text={text} setText={setText} addListItem={addListItem}/>
-
-            <ul>
-                <TodosItem todos={todos} toggleTodoComplete={toggleTodoComplete} removeTodoItem={removeTodoItem}/>
+            <div className="addTodoItem">
+                <AddTodos text={text} setText={setText} addItem={addItem}/>
+            </div>
+            <ul className="todosList">
+                <TodosItem todos={todos} toggleCompleted={toggleCompleted} removeItem={removeItem}/>
             </ul>
         </>
     )

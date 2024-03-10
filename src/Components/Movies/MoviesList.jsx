@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import {fetchMovieList, fetchMoviesType} from "../../api/api.movies";
+import {useState} from "react";
+import {fetchMovieList} from "../../api/api.movies";
 import Search from "./Search";
 import * as PropTypes from "prop-types";
 import './movies.less'

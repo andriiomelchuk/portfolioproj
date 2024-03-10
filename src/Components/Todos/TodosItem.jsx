@@ -1,13 +1,13 @@
-const TodosItem = ({todos, toggleTodoComplete, removeTodoItem}) => {
+
+
+const TodosItem = ({todos, toggleCompleted, removeItem}) => {
     return (
         <>
-            {todos.map(todo =>
-                <li className='todoItem' key={todo.id}>
-                    <input type="checkbox" checked={todo.completed} onChange={() => toggleTodoComplete(todo.id)}/>
-                    <span className='todoText'>{todo.text}</span>
-                    <button onClick={() => removeTodoItem(todo.id)} className='delete'>&times;</button>
-                </li>
-            )}
+            {todos.map(todo => <li key={todo.id} className='todoItem'>
+                <input type="checkbox" onChange={() => toggleCompleted(todo.id)}/>
+                <span>{todo.text}</span>
+                <button className='delete' onClick={() => removeItem(todo.id)}>&times;</button>
+            </li>)}
         </>
     )
 }
