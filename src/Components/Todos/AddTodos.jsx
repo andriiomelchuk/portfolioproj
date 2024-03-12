@@ -1,4 +1,6 @@
 const AddTodos = ({text, setText, addItem}) => {
+
+
     return (
         <>
             <input type="text" value={text} onChange={(e) => setText(e.target.value)}/>
@@ -7,4 +9,4 @@ const AddTodos = ({text, setText, addItem}) => {
     )
 }
 
-export default AddTodos ;
+export default AddTodos;

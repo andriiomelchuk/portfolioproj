@@ -1,49 +1,26 @@
 import {useState} from "react";
 import AddTodos from "./AddTodos";
 import TodosItem from "./TodosItem";
+import {useDispatch} from "react-redux";
+import {addTodoItem} from "../../store/todoSlise";
 
 const TodoList = () => {
 
-    const [text, setText] = useState('');
-    const [todos, setTodos] = useState([]);
-
+    const [todoText, setTodoText] = useState('');
+    const dispatch = useDispatch();
 
     const addItem = () => {
-        setTodos([
-            ...todos,
-            {
-                id: new Date().toISOString(),
-                text,
-                completed: false
-            }
-        ])
+        dispatch(addTodoItem({todoText}));
+        setTodoText('')
     }
-
-    const removeItem = (id) => {
-        setTodos(todos.filter(todo => todo.id !== id));
-    }
-
-    const toggleCompleted = (id) => {
-        setTodos(todos.map(todo => {
-            if (todo.id !== id) return todo;
-
-            return {
-                ...todo,
-                completed: !todo.completed
-        }
-
-
-        }))
-    }
-
 
     return (
         <>
             <div className="addTodoItem">
-                <AddTodos text={text} setText={setText} addItem={addItem}/>
+                <AddTodos text={todoText} setText={setTodoText} addItem={addItem}/>
             </div>
             <ul className="todosList">
-                <TodosItem todos={todos} toggleCompleted={toggleCompleted} removeItem={removeItem}/>
+                <TodosItem/>
             </ul>
         </>
     )
