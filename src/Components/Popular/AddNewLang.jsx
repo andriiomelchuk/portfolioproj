@@ -1,8 +1,11 @@
 import {useState} from "react";
+import Input from "../Input";
+import {useSelector} from "react-redux";
 
 const AddNewLang = ({languages, setLanguages, setSearchParams}) => {
 
     const [newLang, setNewLang] = useState('');
+
 
     const addLang = (event) => {
         event.preventDefault();
@@ -24,14 +27,7 @@ const AddNewLang = ({languages, setLanguages, setSearchParams}) => {
 
     return (
         <>
-            <form action="" onSubmit={addLang}>
-                <input
-                    type="text"
-                    placeholder='enter your language'
-                    value={newLang}
-                    onChange={(event) => setNewLang(event.target.value)}/>
-                <button>Add new lang</button>
-            </form>
+            <Input text={newLang} setText={setNewLang} handleSubmit={addLang} buttonText={'Add new lang'} placeholder={'Enter language'}/>
         </>
     )
 }

@@ -1,17 +1,12 @@
 import {useState} from "react";
 import {fetchMovieList} from "../../api/api.movies";
 import Search from "./Search";
-import * as PropTypes from "prop-types";
 import './movies.less'
 import axios from "axios";
 import {API_KEY} from "../../api/constants";
+import MoviesItem from "./MoviesItem";
 
 
-function Item(props) {
-    return null;
-}
-
-Item.propTypes = {children: PropTypes.node};
 const MoviesList = () => {
 
     const [moviesName, setMoviesName] = useState('');
@@ -24,11 +19,6 @@ const MoviesList = () => {
         fetchMovieList(moviesName).then(moviesData => setMovies(moviesData));
     }
 
-   /* const handleFilter = (movieType, moviesName) => {
-        setSearchType(movieType);
-        console.log(searchType)
-        fetchMoviesType(searchType, moviesName).then(moviesData => setMovies(moviesData))
-    }*/
 
     const handleFilter = (movieType) => {
         setSearchType(movieType);
@@ -53,13 +43,7 @@ const MoviesList = () => {
 
             {movies.length ?
                 <div className='moviesList'>
-                    {movies.map((mov) => {
-                        return <div className='item four-block' key={mov.imdbID}>
-                            <div>{mov.Title}</div>
-                            <div>{mov.Type}</div>
-                            <img src={mov.Poster} alt=""/>
-                        </div>
-                    })}
+                    <MoviesItem movies={movies} />
                 </div>
                 : null}
 

@@ -1,14 +1,11 @@
 import './movies.less'
+import Input from "../Input";
 
 const Search = ({handleSubmit, handleFilter, setMoviesName, moviesName, leng}) => {
 
     return (
         <>
-        <form className='searchForm' onSubmit={handleSubmit}>
-                <input type="text" placeholder='search...' value={moviesName}
-                       onChange={(event) => setMoviesName(event.target.value)}/>
-                <button disabled={!moviesName.length}>Search</button>
-        </form>
+            <Input text={moviesName} setText={setMoviesName} handleSubmit={handleSubmit} buttonText={'Search'} placeholder={'Search...'}/>
             {leng ?
                 <div className='filterBlock'>
                     <p>Filters:</p>

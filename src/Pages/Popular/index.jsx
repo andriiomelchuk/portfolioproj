@@ -1,12 +1,12 @@
-import LanguageSelector from "../../Components/Popular/LanguageSelector";
+import Popular from "../../Components/Popular/index";
 import '../../Components/Popular/Popular.less'
 
-const Popular = () => {
+const PopularPage = () => {
     return (
         <div className="popularPage">
-            <LanguageSelector/>
+            <Popular />
         </div>
     )
 }
 
-export default Popular;
+export default PopularPage;

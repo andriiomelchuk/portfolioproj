@@ -1,7 +1,11 @@
 import PopularItem from "./PopularItem";
+import {useSelector} from "react-redux";
 
 
-const PopularList = (repos) => {
+const PopularList = () => {
+
+    const repos = useSelector(state => state.popular)
+
     return (
         <>
             {repos.repos.map((repo, index) => (

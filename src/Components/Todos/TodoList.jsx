@@ -1,15 +1,15 @@
 import {useState} from "react";
-import AddTodos from "./AddTodos";
 import TodosItem from "./TodosItem";
 import {useDispatch} from "react-redux";
 import {addTodoItem} from "../../store/todoSlise";
+import Input from "../Input";
 
 const TodoList = () => {
 
     const [todoText, setTodoText] = useState('');
     const dispatch = useDispatch();
 
-    const addItem = () => {
+    const handleSubmit = () => {
         dispatch(addTodoItem({todoText}));
         setTodoText('')
     }
@@ -17,7 +17,7 @@ const TodoList = () => {
     return (
         <>
             <div className="addTodoItem">
-                <AddTodos text={todoText} setText={setTodoText} addItem={addItem}/>
+                <Input text={todoText} setText={setTodoText} handleSubmit={handleSubmit} buttonText={'Add'}/>
             </div>
             <ul className="todosList">
                 <TodosItem/>
