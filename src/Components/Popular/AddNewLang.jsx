@@ -1,6 +1,6 @@
 import {useState} from "react";
 import Input from "../Input";
-import {useSelector} from "react-redux";
+
 
 const AddNewLang = ({languages, setLanguages, setSearchParams}) => {
 

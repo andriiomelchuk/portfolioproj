@@ -2,7 +2,6 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {fetchPopularRepos} from "../api/api.github";
 
 
-
 const initialState = {
     repos: [],
     status: '',
@@ -10,18 +9,21 @@ const initialState = {
     lang: '',
 }
 
-export const fetchPopular =  createAsyncThunk (
+export const fetchPopular = createAsyncThunk(
     'popular/fetchPopular',
     async (arg, {rejectWithValue}) => {
         try {
             const response = await fetchPopularRepos(arg);
-            console.log(response)
-            if (!response){
-                throw new Error('Server error. Can\'t loading')
+
+            if (!response) {
+                throw new Error('Server error. Can\'t loading list');
+            }
+            if (arg !== 'all' && response.data.items[0].language.toLowerCase() !== arg) {
+                throw new Error('There is no such language');
             }
 
             return response.data.items;
-        }catch (error){
+        } catch (error) {
             return rejectWithValue(error.message);
         }
     }
