@@ -1,11 +1,15 @@
-const MoviesItem = ({movies}) => {
+import {useSelector} from "react-redux";
+
+const MoviesItem = () => {
+    const movies = useSelector(state => state.movies.movies);
+
     return (
         <>
-            {movies.map((mov) => {
-                return <div className='item four-block' key={mov.imdbID}>
-                    <div>{mov.Title}</div>
-                    <div>{mov.Type}</div>
-                    <img src={mov.Poster} alt=""/>
+            {movies.map((movie) => {
+                return <div className='item four-block' key={movie.imdbID}>
+                    <div>{movie.Title}</div>
+                    <div>{movie.Type}</div>
+                    <img src={movie.Poster} alt=""/>
                 </div>
             })}
         </>

@@ -8,7 +8,6 @@ import {fetchPopular} from "../../store/popularSlice";
 
 const Popular = () => {
 
-
     const dispatch = useDispatch();
     const {status, error} = useSelector(state => state.popular)
     const [searchParams, setSearchParams] = useSearchParams();
@@ -22,7 +21,6 @@ const Popular = () => {
             dispatch(fetchPopular(searchParam))
     }, [searchParams, searchParam, dispatch])
 
-
     return (
         <>
             <ul className='languages'>
@@ -31,7 +29,7 @@ const Popular = () => {
 
             {status === 'loading' ?? <CircularIndeterminate/>}
 
-            {error ?? <h2>{error}</h2>}
+            <h2  className='error'>{error ?? <h2> {error}</h2>}</h2>
 
             <ul className='popularList'>
                 <PopularList/>

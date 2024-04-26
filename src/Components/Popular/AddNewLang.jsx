@@ -27,7 +27,8 @@ const AddNewLang = ({languages, setLanguages, setSearchParams}) => {
 
     return (
         <>
-            <Input text={newLang} setText={setNewLang} handleSubmit={addLang} buttonText={'Add new lang'} placeholder={'Enter language'}/>
+            <Input text={newLang} setText={setNewLang} handleSubmit={addLang} buttonText={'Add new lang'}
+                   placeholder={'Enter language'}/>
         </>
     )
 }

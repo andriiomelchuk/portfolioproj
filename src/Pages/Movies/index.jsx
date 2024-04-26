@@ -1,6 +1,6 @@
-import MoviesList from "../../Components/Movies/MoviesList";
+import Movies from "../../Components/Movies/index";
 
-const Movies = () => {
+const MoviesPage = () => {
 
 
     return(
@@ -8,9 +8,9 @@ const Movies = () => {
         <div className='moviePage'>
             Enter movies name
             <br/>
-            <MoviesList />
+            <Movies />
         </div>
     )
 }
 
-export default Movies
+export default MoviesPage;
