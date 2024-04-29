@@ -1,13 +1,15 @@
 import {useState} from "react";
+import {useDispatch} from "react-redux";
+import {addPlayer} from "../../store/battleSlice";
 
-const PlayerInput = ({id, label, onSubmit}) => {
-
+const PlayerInput = ({id, label}) => {
+    const dispatch = useDispatch();
     const [userName, setUserName] = useState('');
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSubmit(id, userName);
-        console.log(userName);
+        dispatch(addPlayer({id, userName}));
     }
 
     return (
@@ -22,7 +24,7 @@ const PlayerInput = ({id, label, onSubmit}) => {
                     value={userName}
                     onChange={(event) => setUserName(event.target.value)}
                 />
-                <button className="button" disabled={!userName.length}>Submit</button>
+                <button className="button" disabled={!userName.length}>Search player</button>
             </form>
         </>
 
