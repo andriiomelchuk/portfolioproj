@@ -1,67 +1,74 @@
 @import "src/less/variables";
 
-.battleBody {
-  &.container {
+.battle {
+  .error {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 
-  label {
-    padding: 10px 0;
-  }
-
-  button {
-    &.button {
-      margin-top: 15px;
-    }
-  }
-}
-
-
-.battleLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.avatar {
-  border-radius: 50%;
-  width: 100px;
-}
-
-.result {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  .resultCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 300px;
-
-    &.winner {
-      background-color: lightgreen;
+  .battleBody {
+    &.container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
     }
 
-    &.loser {
-      background-color: lightgray;
-    }
-
-    .playerPreview {
+    form {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+
+    label {
+      padding: 10px 0;
+    }
+
+    button {
+      &.button {
+        margin-top: 15px;
+      }
+    }
+  }
+
+
+  .battleLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    width: 100px;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .resultCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 300px;
+
+      &.winner {
+        background-color: lightgreen;
+      }
+
+      &.loser {
+        background-color: lightgray;
+      }
+
+      .playerPreview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }
@@ -72,14 +79,16 @@
       flex-direction: column;
 
       form {
-          margin: 15px 0;
-          font-size: 2.5rem;
-          label{
-              &.userNameHeader{
-                  font-weight: bold;
-                  margin: 15px 0;
-              }
+        margin: 15px 0;
+        font-size: 2.5rem;
+
+        label {
+          &.userNameHeader {
+            font-weight: bold;
+            margin: 15px 0;
           }
+        }
+
         input {
           text-align: center;
 
@@ -94,12 +103,13 @@
 
           }
         }
-          button{
-              width: 200px;
-              height: 50px;
-              font-size: 2.5rem;
-              margin-top: 20px;
-          }
+
+        button {
+          width: 200px;
+          height: 50px;
+          font-size: 2.5rem;
+          margin-top: 20px;
+        }
       }
     }
   }

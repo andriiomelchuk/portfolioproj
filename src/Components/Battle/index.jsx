@@ -7,7 +7,15 @@ import {resetPlayer} from "../../store/battleSlice";
 const Players = () => {
 
     const dispatch = useDispatch();
-    const {playerOneName, playerTwoName, playerOneImage, playerTwoImage, playerOneId, playerTwoId} = useSelector(state => state.battle)
+    const {
+        playerOneName,
+        playerTwoName,
+        playerOneImage,
+        playerTwoImage,
+        playerOneId,
+        playerTwoId,
+        error
+    } = useSelector(state => state.battle)
 
     const handleReset = (id) => {
         dispatch(resetPlayer({id}))
@@ -34,6 +42,7 @@ const Players = () => {
                     </PlayerPreview> :
                     <PlayerInput label={playerTwoId} id={playerTwoId}/>
                 }
+
             </div>
             {playerOneImage && playerTwoImage ?
                 <Link to={{
@@ -41,8 +50,11 @@ const Players = () => {
                     search: `?playerOneName=${playerOneName}&playerTwoName=${playerTwoName}`
                 }}
                       className='battleLink'> Battle </Link> : null}
+            <h2 className='error'>{error ?? <h2> {error}</h2>}</h2>
         </div>
+
+
     )
 }
 
-export default Players ;
+export default Players;

@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
-import {addPlayer} from "../../store/battleSlice";
+import {fetchPlayerThunk} from "../../store/battleSlice";
 
 const PlayerInput = ({id, label}) => {
     const dispatch = useDispatch();
@@ -9,7 +9,8 @@ const PlayerInput = ({id, label}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(addPlayer({id, userName}));
+        /*dispatch(addPlayer({id, userName}));*/
+        dispatch(fetchPlayerThunk({userName, id}))
     }
 
     return (
