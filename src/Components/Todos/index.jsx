@@ -1,11 +1,10 @@
 import {useState} from "react";
-import TodosItem from "./TodosItem";
 import {useDispatch} from "react-redux";
 import {addTodoItem} from "../../store/todoSlise";
 import Input from "../Input";
+import Todoslist from "./TodosList";
 
-const TodoList = () => {
-
+const Todos = () => {
     const [todoText, setTodoText] = useState('');
     const dispatch = useDispatch();
 
@@ -17,13 +16,12 @@ const TodoList = () => {
     return (
         <>
             <div className="addTodoItem">
-                <Input text={todoText} setText={setTodoText} handleSubmit={handleSubmit} buttonText={'Add'}/>
+                <Input text={todoText} setText={setTodoText} handleSubmit={handleSubmit} buttonText={'Add'}
+                       placeholder={undefined}/>
             </div>
-            <ul className="todosList">
-                <TodosItem/>
-            </ul>
+            <Todoslist />
         </>
     )
 }
 
-export default TodoList;
+export default Todos;

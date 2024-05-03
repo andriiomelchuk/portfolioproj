@@ -1,12 +1,12 @@
-import Todolist from "../../Components/Todos/TodoList";
+import Todos from "../../Components/Todos";
 import './todos.less'
 
-const Todo = () => {
+const TodosPage = () => {
     return (
         <div className='todosPage'>
-            <Todolist />
+            <Todos />
         </div>
     )
 }
 
-export default Todo;
+export default TodosPage;
