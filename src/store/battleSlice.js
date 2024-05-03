@@ -21,15 +21,14 @@ export const fetchPlayerThunk = createAsyncThunk(
             if (!response.data) {
                 throw new Error('Server error. Can\'t find player');
             }
-            const data = response.data;
-            console.log(response.data)
-            /*return  response.data*/
+            const data = await response.data;
             dispatch(addPlayer({data, id}))
-        }catch (error) {
+        } catch (error) {
             return rejectWithValue(error.message);
         }
     }
 )
+
 
 export const battleSlice = createSlice({
     name: "battle",
@@ -56,16 +55,16 @@ export const battleSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchPlayerThunk.pending, (state, action) => {
-            state.status = 'loading'
+            state.status = 'loading';
         })
         builder.addCase(fetchPlayerThunk.fulfilled, (state, action) => {
-            state.status = 'resolved'
+            state.status = 'resolved';
             state.playerData = action.payload;
-            state.error = null
+            state.error = null;
         })
         builder.addCase(fetchPlayerThunk.rejected, (state, action) => {
-            state.status = 'rejected'
-            state.error = action.payload === 'Request failed with status code 404' ? 'Server error. Can\'t find player': action.payload;
+            state.status = 'rejected';
+            state.error = action.payload === 'Request failed with status code 404' ? 'Server error. Can\'t find player' : action.payload;
         })
 
     }

@@ -1,5 +1,5 @@
 import Todolist from "../../Components/Todos/TodoList";
-import '../../Components/Todos/todos.less'
+import './todos.less'
 
 const Todo = () => {
     return (

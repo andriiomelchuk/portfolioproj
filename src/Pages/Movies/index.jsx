@@ -1,4 +1,5 @@
 import Movies from "../../Components/Movies/index";
+import  './movies.less';
 
 const MoviesPage = () => {
 

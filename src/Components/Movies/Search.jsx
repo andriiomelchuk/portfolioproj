@@ -1,4 +1,4 @@
-import './movies.less'
+import '../../Pages/Movies/movies.less'
 import Input from "../Input";
 
 import {useDispatch, useSelector} from "react-redux";

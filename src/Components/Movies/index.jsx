@@ -3,7 +3,7 @@ import Search from "./Search";
 import {useEffect} from "react";
 import {fetchMoviesThunk} from "../../store/moviesSlice";
 import {useDispatch, useSelector} from "react-redux";
-import './movies.less'
+
 
 
 const Movies = () => {

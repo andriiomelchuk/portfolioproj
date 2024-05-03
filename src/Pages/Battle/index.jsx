@@ -1,5 +1,5 @@
-import "../../Components/Battle/Battle.less"
 import Players from "../../Components/Battle/index";
+import "./Battle.less"
 
 const Battle = () => {
 

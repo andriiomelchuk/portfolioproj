@@ -1,4 +1,4 @@
-import './Popular.less'
+import '../../Pages/Popular/Popular.less'
 import AddNewLang from "./AddNewLang";
 import {useEffect, useState} from "react";
 import {languagesArr} from "../../api/constants";

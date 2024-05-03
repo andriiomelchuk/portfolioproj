@@ -1,5 +1,5 @@
 import Popular from "../../Components/Popular/index";
-import '../../Components/Popular/Popular.less'
+import './Popular.less'
 
 const PopularPage = () => {
     return (
